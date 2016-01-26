@@ -19,15 +19,15 @@ import java.util.concurrent.Future;
 /*
  * Solution to problem Even Fibonacci numbers https://projecteuler.net/problem=2 from project Euler
  */
-public class EvenFibonacci {
+public class Prblm2_EvenFibonacci {
 
     static Map<Integer, Integer> dict = new HashMap<>();
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         dict.put(0, 0);
         ExecutorService executors = Executors.newFixedThreadPool(1);
-        Future<BigInteger> future1 = executors.submit(() -> getEvenFibonacciSum());
-        Future<Integer> future2 = executors.submit(() -> getFibonacciMemoizedSum());
+        Future<BigInteger> future1 = executors.submit(Prblm2_EvenFibonacci::getEvenFibonacciSum);
+        Future<Integer> future2 = executors.submit(Prblm2_EvenFibonacci::getFibonacciMemoizedSum);
         System.out.printf("Result Simple call => %d \n", future1.get());
         System.out.printf("Result Memoized call => %d ", future2.get());
         executors.shutdown();
