@@ -1,2 +1,2 @@
 # ProjectEulerHackedInJava
-Solutions to problems of Project Euler I try solving in Java :)
+Solutions to problems of Project Euler https://projecteuler.net  I try solving in Java :)
